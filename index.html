@@ -7,6 +7,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	</head>
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CK4TN9YS1V"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-CK4TN9YS1V');
+	</script>
+	
 	<body>
 		<table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 		<tbody>
@@ -23,16 +34,17 @@
 									maximilian dot weiherer at fau dot de
 								</p>
 								<p>
-									I am a first year PhD student at <a href="https://www.fau.eu/">FAU Erlangen-Nürnberg</a>, advised by <a href="https://eggerbernhard.ch/">Prof. Bernhard Egger</a> and <a href="https://www.lgdv.tf.fau.de/person/marc-stamminger/">Prof. Marc Stamminger</a>. 
-									I am part of the <a href="https://www.lgdv.tf.fau.de/">Chair of Visual Computing</a>.
+									I am a second year PhD student at <a href="https://www.fau.eu/">FAU Erlangen-Nürnberg</a>, advised by <a href="https://eggerbernhard.ch/">Prof. Bernhard Egger</a>. 
+									I am part of the <a href="https://twitter.com/cogcovi">Cognitive Computer Vision Lab</a> at the <a href="https://www.lgdv.tf.fau.de/">Chair of Visual Computing</a>.
 								</p>
 								<p>
-									My research interests are broadly centered around computer vision and image processing, both with applications in medicine. 
-									I am particularly interested in statistical shape modeling, non-rigid surface registration, and Gaussian processes.
+									My research interests are broadly centered around computer vision, computer graphics, and machine learning.
+									I am particularly interested in neural scene representations and anything related (including classical SSMs and 3DMMs) that could be used to model the world we live in.
+									I also enjoy transfering my research into real-world applications, especially in the medical domain.
 								</p>
 								<p>
 									I obtained my B.Sc. and M.Sc. in Computer Science from <a href="https://www.oth-regensburg.de/en.html">OTH Regensburg</a> in 2019 and 2021, respectively. 
-									Before joining FAU, I worked several years at the <a href="https://re-mic.de/en/">Regensburg Medical Image Computing (ReMIC) Lab</a> as a Student Researcher, where I was advised by <a href="https://re-mic.de/en/head/">Prof. Christoph Palm</a>. 
+									Before joining FAU, I worked as a Student Researcher at the <a href="https://re-mic.de/en/">Regensburg Medical Image Computing (ReMIC) Lab</a>, where I was advised by <a href="https://re-mic.de/en/head/">Prof. Christoph Palm</a>. 
 									I also spent some time at <a href="https://www.iis.fraunhofer.de/en.html">Fraunhofer IIS</a> as part of the Image Processing and Medical Engineering Department.
 								</p>
 								<p style="text-align:center">
@@ -53,13 +65,13 @@
 						</tr>
 					</tbody>
 					</table>
-		
 					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 					<tbody>
 						<tr>
 							<td style="padding:20px;width:100%;vertical-align:middle">
 								<heading>News</heading>
 								<ul>
+									<li>[11/2022] New <a href="https://arxiv.org/pdf/2211.16314.pdf">preprint</a> on arXiv: Approximating Intersections and Differences Between Statistical Shape Models.</li>
 									<li>[04/2022] Our <a href="https://link.springer.com/content/pdf/10.1007/s00371-022-02431-3.pdf">paper</a> on 3D statistical shape modeling of the female breast is now published in The Visual Computer. </li>
 									<li>[11/2021] I started my PhD at FAU Erlangen-Nürnberg.</li>
 								</ul> 
@@ -67,21 +79,42 @@
 						</tr>
 					</tbody>
 					</table>
-		
 					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 					<tbody>
 						<tr>
 							<td style="padding:20px;width:100%;vertical-align:middle">
 								<heading>Research</heading>
 								<p>
-									Currently, my research is centered around 3D statistical shape modeling of the female breast.
-									Most of this research is done in cooperation with the <a href="https://www.ukr.de/e/departments/Plastic__Reconstructive_and_Hand_Surgery/index.php">University Center of Plastic, Aesthetic, Hand and Reconstructive Surgery</a> at the <a href="https://www.ukr.de/e/index.php">University Hospital Regensburg</a>. 
-									My favorite papers are <span class="highlight">highlighted</span> :)
+								For a full publication list, see my <a href="https://scholar.google.com/citations?user=TR6QYOoAAAAJ&hl=en">Google Scholar</a> profile. Representative papers are <span class="highlight">highlighted</span>.
 								</p>
 							</td>
 						</tr>
+					</tbody>
+					</table>
+					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+					<tbody>
+						<tr>
+							<td  style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/ssm_intersections.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Approximating Intersections and Differences Between Statistical Shape Models [<a href="https://arxiv.org/pdf/2211.16314.pdf">arXiv</a>]
+								</strong>
+								<br>
+								Maximilian Weiherer,
+								<a href="https://www.linkedin.com/in/finn-klein-bba723202/">Finn Klein</a>,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>
+								<br>
+								<em>arXiv</em>, 2022
+								<p>We introduce a novel method to compare SSMs by computing approximate intersections and set-theoretic differences between the affine vector spaces spanned by the models.</p>
+							</td>
+						</tr>
 						<tr bgcolor="#ffffd0">
-							<td style="padding:10px 20px 10px 20px;width:100%;vertical-align:middle">
+							<td  style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/rbsm.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
 								<strong>
 									Learning the shape of female breasts: an open-access 3D statistical shape model of the female breast built from 110 breast scans [<a href="https://link.springer.com/content/pdf/10.1007/s00371-022-02431-3.pdf">pdf</a>] [<a href="https://arxiv.org/pdf/2107.13463.pdf">arXiv</a>] [<a href="https://www.rbsm.re-mic.de">model</a>]
 								</strong>
@@ -93,83 +126,15 @@
 								<a href="http://lukasprantl.de/">Lukas Prantl</a>,
 								<a href="https://re-mic.de/en/head/">Christoph Palm</a>
 								<br>
-								<em>The Visual Computer</em>, 2022
+								<em>The Visual Computer (Vis. Comput.)</em>, 2022
+								<p>We present the first publicly available 3D statistical shape model of the female breast.</p>
 							</td>
 						</tr>
 						<tr>
-							<td style="padding:10px 20px 10px 20px;width:100%;vertical-align:middle">
-								<strong>
-									Implants Versus Lipograft: Analysis of Long-Term Results Following Congenital Breast Asymmetry Correction [<a href="https://link.springer.com/content/pdf/10.1007/s00266-022-02843-5.pdf">pdf</a>]
-								</strong>
-								<br>
-								<a href="https://www.linkedin.com/in/vanessa-brebant-0a391843/">Vanessa Brebant</a>,
-								Maximilian Weiherer,
-								<a href="https://www.researchgate.net/profile/Vivien-Noisser-2">Vivien Noisser</a>,
-								<a href="https://www.researchgate.net/profile/Stephan-Seitz">Stephan Seitz</a>,
-								<a href="http://lukasprantl.de/">Lukas Prantl</a>,
-								<a href="https://www.linkedin.com/in/andreas-eigenberger-090318142/">Andreas Eigenberger</a>
-								<br>
-								<em>Aesthetic Plastic Surgery</em>, 2022
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/haptivist_2.png">
 							</td>
-						</tr>
-						<tr>
-							<td style="padding:10px 20px 10px 20px;width:100%;vertical-align:middle">
-								<strong>
-									Surgery of congenital breast asymmetry - which objective parameter influences the subjective satisfaction with long-term results [<a href="https://link.springer.com/content/pdf/10.1007/s00404-021-06218-0.pdf">pdf</a>]
-								</strong>
-								<br>
-								<a href="https://www.researchgate.net/profile/Vivien-Noisser-2">Vivien Noisser</a>,
-								<a href="https://www.linkedin.com/in/andreas-eigenberger-090318142/">Andreas Eigenberger</a>,
-								Maximilian Weiherer,
-								<a href="https://www.researchgate.net/profile/Stephan-Seitz">Stephan Seitz</a>,
-								<a href="http://lukasprantl.de/">Lukas Prantl</a>,
-								<a href="https://www.linkedin.com/in/vanessa-brebant-0a391843/">Vanessa Brebant</a>
-								<br>
-								<em>Archives of Gynecology and Obstetrics</em> 305, 2021
-							</td>
-						</tr>
-						<tr>
-							<td style="padding:10px 20px 10px 20px;width:100%;vertical-align:middle">
-								<strong>
-									New aspects in digital breast assessment: further refinement of a method for automated digital anthropometry [<a href="https://link.springer.com/content/pdf/10.1007/s00404-020-05862-2.pdf">pdf</a>]
-								</strong>
-								<br>
-								Robin Hartmann,
-								Maximilian Weiherer,
-								<a href="https://www.researchgate.net/profile/Daniel-Schiltz">Daniel Schiltz</a>,
-								<a href="https://magnusbaringer.com/de">Magnus Baringer</a>,
-								<a href="https://www.researchgate.net/profile/Vivien-Noisser-2">Vivien Noisser</a>,
-								<a href="https://www.linkedin.com/in/vanessa-hoesl-837375156/">Vanessa Hösl</a>,
-								<a href="https://www.linkedin.com/in/andreas-eigenberger-090318142/">Andreas Eigenberger</a>,
-								<a href="https://www.researchgate.net/profile/Stephan-Seitz">Stephan Seitz</a>,
-								<a href="https://re-mic.de/en/head/">Christoph Palm</a>,
-								<a href="http://lukasprantl.de/">Lukas Prantl</a>,
-								<a href="https://www.linkedin.com/in/vanessa-brebant-0a391843/">Vanessa Brebant</a>
-								<br>
-								<em>Archives of Gynecology and Obstetrics</em> 303, 2021
-							</td>
-						</tr>
-						<tr>
-							<td style="padding:10px 20px 10px 20px;width:100%;vertical-align:middle">
-								<strong>
-									A Novel Method of Outcome Assessment in Breast Reconstruction Surgery: Comparison of Autologous and Alloplastic Techniques Using Three-Dimensional Surface Imaging [<a href="https://link.springer.com/content/pdf/10.1007/s00266-020-01749-4.pdf">pdf</a>]
-								</strong>
-								<br>
-								Robin Hartmann,
-								Maximilian Weiherer,
-								<a href="https://www.researchgate.net/profile/Daniel-Schiltz">Daniel Schiltz</a>,
-								<a href="https://www.researchgate.net/profile/Stephan-Seitz">Stephan Seitz</a>,
-								<a href="https://www.researchgate.net/profile/Luisa_Lotter">Luisa Lotter</a>,
-								Alexandra Anker,
-								<a href="https://re-mic.de/en/head/">Christoph Palm</a>,
-								<a href="http://lukasprantl.de/">Lukas Prantl</a>,
-								<a href="https://www.linkedin.com/in/vanessa-brebant-0a391843/">Vanessa Brebant</a>
-								<br>
-								<em>Aesthetic Plastic Surgery</em> 44, 2020
-							</td>
-						</tr>
-						<tr>
-							<td style="padding:10px 20px 10px 20px;width:100%;vertical-align:middle">
+							<td style="padding:20px;width:75%;vertical-align:middle">
 								<strong>
 									Optically tracked and 3D printed haptic phantom hand for surgical training system [<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7063285/pdf/qims-10-02-340.pdf">pdf</a>]
 								</strong>
@@ -179,25 +144,33 @@
 								<a href="https://www.researchgate.net/profile/Michaela-Huber-4">Michaela Huber</a>,
 								<a href="https://re-mic.de/en/head/">Christoph Palm</a>
 								<br>
-								<em>Quantitative Imaging in Medicine and Surgery</em> 10, 2020
+								<em>Quantitative Imaging in Medicine and Surgery (QIMS)</em> 10, 2020
+								<p>Improved previously developed metamaterials to imitate human soft tissue and presented an optically tracked 3D printed phantom of the whole hand.</p>
 							</td>
 						</tr>
 						<tr>
-							<td style="padding:10px 20px 10px 20px;width:100%;vertical-align:middle">
+							<td  style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/shading.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
 								<strong>
 									Retrospective Color Shading Correction for Endoscopic Images [<a href="https://link.springer.com/content/pdf/10.1007%2F978-3-658-29267-6_3.pdf">pdf</a>]
 								</strong>
 								<br>
 								Maximilian Weiherer,
-								<a href="https://www.researchgate.net/profile/Vivien-Noisser-2">Martin Zorn</a>,
+								Martin Zorn,
 								<a href="https://www.linkedin.com/in/thomas-wittenberg-1779952/">Thomas Wittenberg</a>,
 								<a href="https://re-mic.de/en/head/">Christoph Palm</a>
 								<br>
-								<em>Bildverarbeitung für die Medizin</em>, 2020
+								<em>Bildverarbeitung für die Medizin (BVM)</em>, 2020
+								<p>Extending the retrospective shading correction method based on signal envelope estimation to color images using principal color components.</p>
 							</td>
 						</tr>
 						<tr bgcolor="#ffffd0">
-							<td style="padding:10px 20px 10px 20px;width:100%;vertical-align:middle">
+							<td  style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/haptivist_1.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
 								<strong>
 									Imitating human soft tissue on basis of a dual-material 3D print using a support-filled metamaterial to provide bimanual haptic for a hand surgery training system [<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6351818/pdf/qims-09-01-30.pdf">pdf</a>]
 								<br>
@@ -207,11 +180,15 @@
 								<a href="https://www.researchgate.net/profile/Michaela-Huber-4">Michaela Huber</a>,
 								<a href="https://re-mic.de/en/head/">Christoph Palm</a>
 								<br>
-								<em>Quantitative Imaging in Medicine and Surgery</em> 9, 2019
+								<em>Quantitative Imaging in Medicine and Surgery (QIMS)</em> 9, 2019
+								<p>We propose new 3D-printable support-filled metamaterials to imitate human soft tissue.</p>
 							</td>
 						</tr>
 						<tr>
-							<td style="padding:10px 20px 10px 20px;width:100%;vertical-align:middle">
+							<td  style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/dop.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
 								<strong>
 									Stitching Pathological Tissue Images using DOP Feature Tracking [<a href="https://link.springer.com/content/pdf/10.1007/978-3-662-56537-7_84.pdf">pdf</a>]
 								</strong>
@@ -225,18 +202,46 @@
 								<a href="https://www.linkedin.com/in/christian-m%C3%BCnzenmayer-b903a888/">Christian Münzenmayer</a>,
 								<a href="https://www.researchgate.net/profile/Michaela-Benz">Michaela Benz</a>
 								<br>
-								<em>Bildverarbeitung für die Medizin</em>, 2018
+								<em>Bildverarbeitung für die Medizin (BVM)</em>, 2018
+								<p>Using the difference of two elliptical paraboloids as approximation of the Laplacian of Gaussian, we enable real-time image stitching of microscopic images.</p>
 							</td>
 						</tr>
-						
-						
+					</tbody>
+					</table>
+					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+					<tbody>
 						<tr>
-							<td style="padding:10px 20px 10px 20px;width:100%;vertical-align:middle">
+							<td style="padding:20px;width:100%;vertical-align:middle">
+								<heading>Not So Serious Research</heading>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+					<tbody>
+						<tr>
+							<td  style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/sigbovik_erlkoenig.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									A Free Computer Vision Lesson for Car Manufacturers or It is Time to Retire the Erlkönig [<a href="sigbovik_erlkoenig.pdf">pdf</a>]
+								</strong>
 								<br>
-								<hr>
-								<p>
-									This template was once created by <a href="https://jonbarron.info/">Jon Barron</a> an can now be stolen from <a href="https://github.com/jonbarron/website">here</a>.
-								</p>
+								Maximilian Weiherer,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>
+								<br>
+								<em>Special Interest Group on Harry Quechua Bovik (SIGBOVIK)</em>, 2022
+								<p>We blame car manufacturers by showing that camouflaged cars (a.k.a. Erlkönige) can be better 3D reconstructed than its uncovered counterparts (without disturbing patterns).</p>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+					<tbody>
+						<tr>
+							<td style="padding:20px;width:100%;vertical-align:middle">
+								This template was once created by <a href="https://jonbarron.info/">Jon Barron</a> an can now be stolen from <a href="https://github.com/jonbarron/website">here</a>.
 							</td>
 						</tr>
 					</tbody>
