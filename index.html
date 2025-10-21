@@ -39,8 +39,8 @@
 								</p>
 								<p>
 									My research interests are broadly centered around computer vision, computer graphics, and machine learning.
-									I am particularly interested in neural scene representations and anything related (including classical SSMs and 3DMMs) that could be used to model the world we live in.
-									I also enjoy transferring my research into real-world applications, especially in the medical domain.
+									I am particulary interested in kernel-based 3D surface reconstruction and it's theoretical connection to neural networks, and multi-modal/multi-spectral neural scene representations.
+									I am also actively working on 3D neural parametric breast shape models for low-cost and accessible breast surface reconstruction.
 								</p>
 								<p>
 									I obtained my B.Sc. and M.Sc. in Computer Science from <a href="https://www.oth-regensburg.de/en/">OTH Regensburg</a> in 2019 and 2021, respectively. 
@@ -80,7 +80,86 @@
 					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 					<tbody>
 						<tr bgcolor="#ffffd0">
-							<td  style="padding:20px;width:25%;vertical-align:middle">
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/lirbsm.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Learning Neural Parametric 3D Breast Shape Models for Metrical Surface Reconstruction From Monocular RGB Videos [<a href="https://arxiv.org/abs/2510.13540">arXiv</a>] [<a href="https://rbsm.re-mic.de/local-implicit/">project page</a>]
+								</strong>
+								<br>
+								Maximilian Weiherer,
+								Antonia von Riedheim,
+								<a href="https://www.linkedin.com/in/vanessa-brebant-0a391843/">Vanessa Brebant</a>,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger*</a>,
+								<a href="https://re-mic.de/en/head/">Christoph Palm*</a>
+								<br>
+								<em>arXiv</em>, 2025
+								<p>We introduce a high-fidelity 3D neural parametric breast shape model and use it as a prior for model-based breast surface reconstruction from monocular RGB videos.</p>
+							</td>
+						</tr>
+
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img style="display:block;margin:0 auto" width="150" src="images/ms_splatting.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Multi-Spectral Gaussian Splatting with Neural Color Representation [<a href="https://arxiv.org/abs/2506.03407">arXiv</a>] [<a href="https://meyerls.github.io/ms_splatting/">project page</a>]
+								</strong>
+								<br>
+								<a href="https://meyerls.github.io">Lukas Meyer</a>,
+								<a href="https://j-gruen.github.io">Josef Grün</a>,
+								Maximilian Weiherer,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>,
+								Marc Stamminger,
+								<a href="https://lfranke.github.io">Linus Franke</a>
+								<br>
+								<em>arXiv</em>, 2025
+								<p>We propose MS-Splatting, an extension of 3DGS to multi-spectral inputs that uses a novel neural color representation instead of simple per-band spherical harmonics. </p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/towards_ms_splatting.gif">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Towards Integrating Multi-Spectral Imaging with Gaussian Splatting [<a href="https://arxiv.org/abs/2509.00989">arXiv</a>] [<a href="https://meyerls.github.io/towards_multi_spec_splat/">project page</a>]
+								</strong>
+								<br>
+								<a href="https://meyerls.github.io">Lukas Meyer*</a>,
+								<a href="https://j-gruen.github.io">Josef Grün*</a>,
+								Maximilian Weiherer,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>,
+								Marc Stamminger,
+								<a href="https://lfranke.github.io">Linus Franke</a>
+								<br>
+								<em>Vision, Modeling, and Visualization (VMV)</em>, 2025
+								<p>We present a systematic and comprehensive evaluation of how to integrate multi-spectral imagery (red, green, red-edge, and near-infrared) into the 3D Gaussian Splatting framework.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/irbsm.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									iRBSM: A Deep Implicit 3D Breast Shape Model [<a href="https://link.springer.com/chapter/10.1007/978-3-658-47422-5_11">pdf</a>] [<a href="https://arxiv.org/abs/2412.13244">arXiv</a>] [<a href="https://rbsm.re-mic.de/implicit/">project page</a>]
+								</strong>
+								<br>
+								Maximilian Weiherer,
+								Antonia von Riedheim,
+								<a href="https://www.linkedin.com/in/vanessa-brebant-0a391843/">Vanessa Brebant</a>,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>,
+								<a href="https://re-mic.de/en/head/">Christoph Palm</a>
+								<br>
+								<em>German Conference on Medical Image Computing (BVM)</em>, 2025
+								<p>We introduce the first deep implicit 3D breast shape model. </p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffd0">
+							<td style="padding:20px;width:25%;vertical-align:middle">
 								<img style="display:block;margin:0 auto" width="120" src="images/matern.png">
 							</td>
 							<td style="padding:20px;width:75%;vertical-align:middle">
@@ -96,7 +175,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td  style="padding:20px;width:25%;vertical-align:middle">
+							<td style="padding:20px;width:25%;vertical-align:middle">
 								<img style="display:block;margin:0 auto" width="120" src="images/thermal_nerf.png">
 							</td>
 							<td style="padding:20px;width:75%;vertical-align:middle">
@@ -130,13 +209,13 @@
 								<p>We introduce a new method to compare SSMs by computing approximate intersections and set-theoretic differences between the allowable shape domains spanned by the models.</p>
 							</td>
 						</tr>
-						<tr bgcolor="#ffffd0">
+						<tr>
 							<td style="padding:20px;width:25%;vertical-align:middle;text-align:center">
 								<img style="display:block;margin:0 auto" width="120" src="images/rbsm.png">
 							</td>
 							<td style="padding:20px;width:75%;vertical-align:middle">
 								<strong>
-									Learning the shape of female breasts: an open-access 3D statistical shape model of the female breast built from 110 breast scans [<a href="https://link.springer.com/content/pdf/10.1007/s00371-022-02431-3.pdf">pdf</a>] [<a href="https://arxiv.org/abs/2107.13463">arXiv</a>] [<a href="https://www.rbsm.re-mic.de">model</a>]
+									Learning the shape of female breasts: an open-access 3D statistical shape model of the female breast built from 110 breast scans [<a href="https://link.springer.com/content/pdf/10.1007/s00371-022-02431-3.pdf">pdf</a>] [<a href="https://arxiv.org/abs/2107.13463">arXiv</a>] [<a href="https://rbsm.re-mic.de/explicit/">project page</a>]
 								</strong>
 								<br>
 								Maximilian Weiherer,
