@@ -1,1 +1,347 @@
-Soon there will be a nice project page here.
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VKSR: Scalable Kernel Surface Reconstruction Using Vecchia's Approximation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="https://unpkg.com/three@0.137.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.137.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://unpkg.com/three@0.137.0/examples/js/loaders/PLYLoader.js"></script>
+  <script src="./static/js/index.js"></script>
+  <!-- Custom CSS -->
+  <style>
+    .container.is-max-desktop {
+      max-width: 1050px !important;
+    }
+
+    .method-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      border: 0;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">VKSR: Scalable Kernel Surface Reconstruction Using Vecchia's Approximation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://mweiherer.github.io">Maximilian Weiherer</a>,</span>
+            <span class="author-block">
+              <a href="https://pelzlab.science/people/phd/06_williams.html">Chukwudi Williams Umah</a>,</span>
+            <span class="author-block">
+              <a href="https://eggerbernhard.ch">Bernhard Egger</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Friedrich-Alexander-Universität Erlangen-Nürnberg</span>
+          </div>
+ 
+          <div class="is-size-5 publication-venue" style="margin: 0 auto;text-align: center;">
+            <span>ECCV 2026</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+
+        <p class="has-text-centered dataset-viewer-description" style="margin-top: 10px;">
+          <strong style="font-size: 1.07rem;">VKSR scales kernel surface reconstruction to point clouds with millions of points without requiring (out-of-core) subdivision schemes and while maintaining strong performance on sparse inputs, unlike widely used Screened Poisson Surface Reconstruction (SPSR). </strong>
+       
+          </p>
+        <figure
+          class="image-compare"
+          data-compare="siren-room"
+          data-right-ns-src="./static/siren_room_renderings/trimmed/baselines_ns.png"
+          data-right-spsr-src="./static/siren_room_renderings/trimmed/baselines_spsr.png"
+        >
+          <img
+            src="./static/siren_room_renderings/trimmed/baselines_ns.png"
+            alt="Siren Room rendering by NS"
+            class="image-compare-base"
+            loading="lazy"
+          >
+          <div class="image-compare-overlay">
+            <img
+              src="./static/siren_room_renderings/trimmed/_ours.png"
+              alt="Siren Room rendering by VKSR"
+              class="image-compare-top"
+              loading="lazy"
+            >
+          </div>
+          <div class="image-compare-divider" aria-hidden="true"></div>
+          <div class="image-compare-badges" aria-hidden="true">
+            <span class="image-compare-badge is-left" data-compare-left-badge></span>
+            <span class="image-compare-badge is-right" data-compare-right-badge></span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="image-compare-slider"
+            aria-label="Compare NS and VKSR renderings"
+          >
+        </figure>
+        <div class="image-compare-controls">
+          <div class="dataset-viewer-method-selector image-compare-baseline-selector" role="group" aria-label="Right-side comparison baseline">
+            <label class="dataset-viewer-method-option image-compare-toggle-label">
+              <input
+                type="checkbox"
+                data-compare-baseline-for="siren-room"
+                value="spsr"
+              >
+              <span>SPSR</span>
+            </label>
+            <label class="dataset-viewer-method-option image-compare-toggle-label">
+              <input
+                type="checkbox"
+                data-compare-baseline-for="siren-room"
+                value="ns"
+                checked
+              >
+              <span>Neural Splines</span>
+            </label>
+          </div>
+        </div>
+
+      <h2 class="subtitle has-text-centered">
+        VKSR reconstructs 10M+ points better and over 90&times; faster than an existing kernel method, Neural Splines.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>We propose Vecchia Kernel Surface Reconstruction (VKSR), an accurate implicit surface reconstruction method that efficiently scales recent kernel-based techniques to large point clouds with millions of points.</p>
+            <p>While existing (global) kernel methods work well in a sparse setting, due to low-rank approximations, performance degrades quickly when presented with dense point clouds sampled from surfaces with high geometric complexity or large-scale inputs with millions of points.
+            To overcome this limitation and inspired by the Gaussian Process literature, VKSR uses Vecchia's approximation instead of low-rank approximations, which <em>naturally</em> shifts computation from a global to a local level and allows reconstructing 14M+ points in minutes.</p>
+            <p>VKSR achieves state-of-the-art results on several challenging datasets while retaining kernel methods' favorable properties when reconstructing sparse inputs.</p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <p>The <strong>key idea of VKSR</strong> is simple: We view kernel surface reconstruction from the Gaussian Process (GP) perspective and <strong>replace previously employed low-rank approximations with Vecchia's approximation</strong>, routed in the GP literature.</p>
+      
+        <iframe class="method-video"
+          src="https://www.youtube.com/embed/ZorgsAKPjac?start=113"
+          title="VKSR method video"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <!--/ Method. -->
+
+
+
+    <!-- Reconstruction on ShapeNet. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Reconstruction on ShapeNet</h2>
+        <p>Meshes are extracted at a voxel resolution of <strong>128³</strong> (to ease visualization, we display meshes decimated by a factor of two, with negligible loss of geometric detail). See paper for details.</p>
+        <p class="has-text-centered dataset-viewer-description" style="margin-top: 15px;">
+          Drag to rotate, right-drag to translate, scroll to zoom, and press <strong>R</strong> to reset all views.
+        </p>
+        <div class="tabs is-centered is-boxed" id="shapenet-viewer-tabs">
+          <ul>
+            <li class="is-active" data-shapenet-tab="dense"><a>Dense (100K input points)</a></li>
+            <li data-shapenet-tab="sparse"><a>Sparse (1K input points)</a></li>
+          </ul>
+        </div>
+        <div class="shapenet-viewer-tab-panels">
+          <div id="shapenet-tab-panel-dense" class="shapenet-viewer-tab-panel">
+            <div id="shapenet-dense-viewer-grid" class="dataset-viewer-grid shapenet-dense-viewer-grid"></div>
+            <div id="shapenet-dense-viewer-model-buttons" class="buttons is-centered dataset-viewer-model-buttons shapenet-dense-viewer-model-buttons"></div>
+            <div id="shapenet-dense-viewer-method-selector" class="dataset-viewer-method-selector shapenet-dense-viewer-method-selector"></div>
+          </div>
+          <div id="shapenet-tab-panel-sparse" class="shapenet-viewer-tab-panel is-hidden">
+            <div id="shapenet-sparse-viewer-grid" class="dataset-viewer-grid shapenet-sparse-viewer-grid"></div>
+            <div id="shapenet-sparse-viewer-model-buttons" class="buttons is-centered dataset-viewer-model-buttons shapenet-sparse-viewer-model-buttons"></div>
+            <div id="shapenet-sparse-viewer-method-selector" class="dataset-viewer-method-selector shapenet-sparse-viewer-method-selector"></div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <!--/ Reconstruction on ShapeNet. -->
+
+    <!-- Reconstruction on the Surface Reconstruction Benchmark. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Reconstruction on the Surface Reconstruction Benchmark</h2>
+        <p>Meshes are extracted at a voxel resolution of <strong>256³</strong> (to ease visualization, we display meshes decimated by a factor of ten, with negligible loss of geometric detail). See paper for details.</p>
+        <p class="has-text-centered dataset-viewer-description" style="margin-top: 15px;">
+          Drag to rotate, right-drag to translate, scroll to zoom, and press <strong>R</strong> to reset all views.
+        </p>
+        <div id="srb-dense-viewer-grid" class="dataset-viewer-grid srb-dense-viewer-grid"></div>
+        <div id="srb-dense-viewer-model-buttons" class="buttons is-centered dataset-viewer-model-buttons srb-dense-viewer-model-buttons"></div>
+        <div id="srb-dense-viewer-method-selector" class="dataset-viewer-method-selector srb-dense-viewer-method-selector"></div>
+      </div>
+    </div>
+    <!--/ Reconstruction on the Surface Reconstruction Benchmark. -->
+
+    <!-- Reconstruction on the Stanford 3D Scanning Repository. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Reconstruction on the Stanford 3D Scanning Repository</h2>
+        <p>Meshes are extracted at a voxel resolution of <strong>1024³</strong> (to ease visualization, we display meshes decimated by a factor of ten, with negligible loss of geometric detail). See paper for details.</p>
+        <p class="has-text-centered dataset-viewer-description" style="margin-top: 15px;">
+          Drag to rotate, right-drag to translate, scroll to zoom, and press <strong>R</strong> to reset all views.
+        </p>
+        <div id="stanford-viewer-grid" class="dataset-viewer-grid stanford-viewer-grid"></div>
+        <div id="stanford-viewer-model-buttons" class="buttons is-centered dataset-viewer-model-buttons stanford-viewer-model-buttons"></div>
+        <div id="stanford-viewer-method-selector" class="dataset-viewer-method-selector stanford-viewer-method-selector"></div>
+
+      </div>
+    </div>
+    <!--/ Reconstruction on the Stanford 3D Scanning Repository. -->
+
+    <!-- Reconstruction on ScanNet. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Reconstruction on ScanNet</h2>
+        <p>Meshes are extracted at a voxel resolution of <strong>512³</strong> (to ease visualization, we display meshes decimated by a factor of ten, with negligible loss of geometric detail). See paper for details.</p>
+        <p class="has-text-centered dataset-viewer-description" style="margin-top: 15px;">
+          Drag to rotate, right-drag to translate, scroll to zoom, and press <strong>R</strong> to reset all views.
+        </p>
+        <div id="scannet-viewer-grid" class="dataset-viewer-grid scannet-viewer-grid"></div>
+        <div id="scannet-viewer-model-buttons" class="buttons is-centered dataset-viewer-model-buttons scannet-viewer-model-buttons"></div>
+        <div id="scannet-viewer-method-selector" class="dataset-viewer-method-selector scannet-viewer-method-selector"></div>
+
+      </div>
+    </div>
+    <!--/ Reconstruction on ScanNet. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{weiherer2026vksr,
+  author    = {Weiherer, Maximilian and Umah, Chukwudi Williams and Egger, Bernhard},
+  title     = {VKSR: Scalable Kernel Surface Reconstruction Using Vecchia's Approximation},
+  booktitle = {ECCV},
+  year      = {2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="#">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="#" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p class="has-text-centered">
+            This website template has been borrowed from <a href="https://keunhong.com">Keunhong Park</a>'s <a href="https://nerfies.github.io">Nerfies</a> website. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
