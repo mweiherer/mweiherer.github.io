@@ -1,347 +1,369 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VKSR: Scalable Kernel Surface Reconstruction Using Vecchia's Approximation</title>
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Maximilian Weiherer</title>
+		<meta name="author" content="Maximilian Weiherer">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	</head>
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CK4TN9YS1V"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+	  gtag('config', 'G-CK4TN9YS1V');
+	</script>
+	
+	<body>
+		<table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+		<tbody>
+			<tr style="padding:0px">
+				<td style="padding:0px">
+				
+					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+					<tbody>
+						<tr style="padding:0px">
+							<td style="padding:2.5%;width:63%;vertical-align:middle">
+								<p style="text-align:center">
+									<name>Maximilian Weiherer</name>
+									<br>
+									maximilian dot weiherer at fau dot de
+								</p>
+								<p>
+									I am a PhD student at <a href="https://www.fau.eu/">FAU Erlangen-Nürnberg</a>, advised by <a href="https://eggerbernhard.ch/">Prof. Bernhard Egger</a>. 
+									I am part of the <a href="https://twitter.com/cogcovi">Cognitive Computer Vision Lab</a> at the <a href="https://www.lgdv.tf.fau.de/">Chair of Visual Computing</a>.
+								</p>
+								<p>
+									My research interests are broadly centered around computer vision, computer graphics, and machine learning.
+									I am particularly interested in kernel-based 3D surface reconstruction and its theoretical connection to neural networks, and multi-modal/multi-spectral neural scene representations.
+									I am also actively working on 3D neural parametric breast shape models for low-cost and accessible breast surface reconstruction.
+								</p>
+								<p>
+									I obtained my B.Sc. and M.Sc. in Computer Science from <a href="https://www.oth-regensburg.de/en/">OTH Regensburg</a> in 2019 and 2021, respectively. 
+									Before joining FAU, I worked as a Student Researcher at the <a href="https://re-mic.de/en/">Regensburg Medical Image Computing (ReMIC) Lab</a>, where I was advised by <a href="https://re-mic.de/en/head/">Prof. Christoph Palm</a>. 
+									I also spent some time at <a href="https://www.iis.fraunhofer.de/en.html">Fraunhofer IIS</a> as part of the Image Processing and Medical Engineering Department.
+								</p>
+								<p style="text-align:center">
+									<a href="https://scholar.google.com/citations?user=TR6QYOoAAAAJ&hl=en">Google Scholar</a>
+									&nbsp/&nbsp
+									<a href="https://www.linkedin.com/in/maximilian-weiherer-b00222153/">LinkedIn</a> 
+									&nbsp/&nbsp
+									<a href="https://www.researchgate.net/profile/Maximilian-Weiherer">ResearchGate</a> 
+									&nbsp/&nbsp
+									<a href="https://twitter.com/maxweiherer">X</a>
+								</p>
+							</td>
+							<td style="padding:2.5%;width:40%;max-width:40%">
+								<a href="images/maximilian_weiherer.png">
+									<img style="width:100%;max-width:100%" alt="profile photo" src="images/maximilian_weiherer.png" class="hoverZoomLink">
+								</a>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+					<tbody>
+						<tr>
+							<td style="padding:20px;width:100%;vertical-align:middle">
+								<heading>Research</heading>
+								<p>
+								For a full publication list, see my <a href="https://scholar.google.com/citations?user=TR6QYOoAAAAJ&hl=en">Google Scholar</a> profile. Representative papers are <span class="highlight">highlighted</span>.
+								</p>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+					<tbody>
+						<tr bgcolor="#ffffd0">
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/lirbsm.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Learning Neural Parametric 3D Breast Shape Models for Metrical Surface Reconstruction From Monocular RGB Videos [<a href="https://rbsm.re-mic.de/local-implicit/">project page</a>] [<a href="https://arxiv.org/abs/2510.13540">paper</a>] [<a href="https://github.com/mweiherer/local-irbsm">code</a>]
+								</strong>
+								<br>
+								Maximilian Weiherer,
+								Antonia von Riedheim,
+								<a href="https://www.linkedin.com/in/vanessa-brebant-0a391843/">Vanessa Brebant</a>,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger*</a>,
+								<a href="https://re-mic.de/en/head/">Christoph Palm*</a>
+								<br>
+								<em>Machine Learning for Biomedical Imaging (MELBA)</em>, 2026
+								<p>We introduce a high-fidelity 3D neural parametric breast shape model and use it as a prior for model-based breast surface reconstruction from monocular RGB videos.</p>
+							</td>
+						</tr>
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="https://unpkg.com/three@0.137.0/build/three.min.js"></script>
-  <script src="https://unpkg.com/three@0.137.0/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://unpkg.com/three@0.137.0/examples/js/loaders/PLYLoader.js"></script>
-  <script src="./static/js/index.js"></script>
-  <!-- Custom CSS -->
-  <style>
-    .container.is-max-desktop {
-      max-width: 1050px !important;
-    }
-
-    .method-video {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      height: auto;
-      border: 0;
-      margin-top: 1.5rem;
-    }
-  </style>
-</head>
-<body>
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">VKSR: Scalable Kernel Surface Reconstruction Using Vecchia's Approximation</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://mweiherer.github.io">Maximilian Weiherer</a>,</span>
-            <span class="author-block">
-              <a href="https://pelzlab.science/people/phd/06_williams.html">Chukwudi Williams Umah</a>,</span>
-            <span class="author-block">
-              <a href="https://eggerbernhard.ch">Bernhard Egger</a>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">Friedrich-Alexander-Universität Erlangen-Nürnberg</span>
-          </div>
- 
-          <div class="is-size-5 publication-venue" style="margin: 0 auto;text-align: center;">
-            <span>ECCV 2026</span>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-
-
-        <p class="has-text-centered dataset-viewer-description" style="margin-top: 10px;">
-          <strong style="font-size: 1.07rem;">VKSR scales kernel surface reconstruction to point clouds with millions of points without requiring (out-of-core) subdivision schemes and while maintaining strong performance on sparse inputs, unlike widely used Screened Poisson Surface Reconstruction (SPSR). </strong>
-       
-          </p>
-        <figure
-          class="image-compare"
-          data-compare="siren-room"
-          data-right-ns-src="./static/siren_room_renderings/trimmed/baselines_ns.png"
-          data-right-spsr-src="./static/siren_room_renderings/trimmed/baselines_spsr.png"
-        >
-          <img
-            src="./static/siren_room_renderings/trimmed/baselines_ns.png"
-            alt="Siren Room rendering by NS"
-            class="image-compare-base"
-            loading="lazy"
-          >
-          <div class="image-compare-overlay">
-            <img
-              src="./static/siren_room_renderings/trimmed/_ours.png"
-              alt="Siren Room rendering by VKSR"
-              class="image-compare-top"
-              loading="lazy"
-            >
-          </div>
-          <div class="image-compare-divider" aria-hidden="true"></div>
-          <div class="image-compare-badges" aria-hidden="true">
-            <span class="image-compare-badge is-left" data-compare-left-badge></span>
-            <span class="image-compare-badge is-right" data-compare-right-badge></span>
-          </div>
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value="50"
-            class="image-compare-slider"
-            aria-label="Compare NS and VKSR renderings"
-          >
-        </figure>
-        <div class="image-compare-controls">
-          <div class="dataset-viewer-method-selector image-compare-baseline-selector" role="group" aria-label="Right-side comparison baseline">
-            <label class="dataset-viewer-method-option image-compare-toggle-label">
-              <input
-                type="checkbox"
-                data-compare-baseline-for="siren-room"
-                value="spsr"
-              >
-              <span>SPSR</span>
-            </label>
-            <label class="dataset-viewer-method-option image-compare-toggle-label">
-              <input
-                type="checkbox"
-                data-compare-baseline-for="siren-room"
-                value="ns"
-                checked
-              >
-              <span>Neural Splines</span>
-            </label>
-          </div>
-        </div>
-
-      <h2 class="subtitle has-text-centered">
-        VKSR reconstructs 10M+ points better and over 90&times; faster than an existing kernel method, Neural Splines.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>We propose Vecchia Kernel Surface Reconstruction (VKSR), an accurate implicit surface reconstruction method that efficiently scales recent kernel-based techniques to large point clouds with millions of points.</p>
-            <p>While existing (global) kernel methods work well in a sparse setting, due to low-rank approximations, performance degrades quickly when presented with dense point clouds sampled from surfaces with high geometric complexity or large-scale inputs with millions of points.
-            To overcome this limitation and inspired by the Gaussian Process literature, VKSR uses Vecchia's approximation instead of low-rank approximations, which <em>naturally</em> shifts computation from a global to a local level and allows reconstructing 14M+ points in minutes.</p>
-            <p>VKSR achieves state-of-the-art results on several challenging datasets while retaining kernel methods' favorable properties when reconstructing sparse inputs.</p>
-          </div>
-        </div>
-      </div>
-      <!--/ Abstract. -->
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <!-- Method. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
-        <p>The <strong>key idea of VKSR</strong> is simple: We view kernel surface reconstruction from the Gaussian Process (GP) perspective and <strong>replace previously employed low-rank approximations with Vecchia's approximation</strong>, routed in the GP literature.</p>
-      
-        <iframe class="method-video"
-          src="https://www.youtube.com/embed/ZorgsAKPjac?start=113"
-          title="VKSR method video"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-    <!--/ Method. -->
-
-
-
-    <!-- Reconstruction on ShapeNet. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Reconstruction on ShapeNet</h2>
-        <p>Meshes are extracted at a voxel resolution of <strong>128³</strong> (to ease visualization, we display meshes decimated by a factor of two, with negligible loss of geometric detail). See paper for details.</p>
-        <p class="has-text-centered dataset-viewer-description" style="margin-top: 15px;">
-          Drag to rotate, right-drag to translate, scroll to zoom, and press <strong>R</strong> to reset all views.
-        </p>
-        <div class="tabs is-centered is-boxed" id="shapenet-viewer-tabs">
-          <ul>
-            <li class="is-active" data-shapenet-tab="dense"><a>Dense (100K input points)</a></li>
-            <li data-shapenet-tab="sparse"><a>Sparse (1K input points)</a></li>
-          </ul>
-        </div>
-        <div class="shapenet-viewer-tab-panels">
-          <div id="shapenet-tab-panel-dense" class="shapenet-viewer-tab-panel">
-            <div id="shapenet-dense-viewer-grid" class="dataset-viewer-grid shapenet-dense-viewer-grid"></div>
-            <div id="shapenet-dense-viewer-model-buttons" class="buttons is-centered dataset-viewer-model-buttons shapenet-dense-viewer-model-buttons"></div>
-            <div id="shapenet-dense-viewer-method-selector" class="dataset-viewer-method-selector shapenet-dense-viewer-method-selector"></div>
-          </div>
-          <div id="shapenet-tab-panel-sparse" class="shapenet-viewer-tab-panel is-hidden">
-            <div id="shapenet-sparse-viewer-grid" class="dataset-viewer-grid shapenet-sparse-viewer-grid"></div>
-            <div id="shapenet-sparse-viewer-model-buttons" class="buttons is-centered dataset-viewer-model-buttons shapenet-sparse-viewer-model-buttons"></div>
-            <div id="shapenet-sparse-viewer-method-selector" class="dataset-viewer-method-selector shapenet-sparse-viewer-method-selector"></div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    <!--/ Reconstruction on ShapeNet. -->
-
-    <!-- Reconstruction on the Surface Reconstruction Benchmark. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Reconstruction on the Surface Reconstruction Benchmark</h2>
-        <p>Meshes are extracted at a voxel resolution of <strong>256³</strong> (to ease visualization, we display meshes decimated by a factor of ten, with negligible loss of geometric detail). See paper for details.</p>
-        <p class="has-text-centered dataset-viewer-description" style="margin-top: 15px;">
-          Drag to rotate, right-drag to translate, scroll to zoom, and press <strong>R</strong> to reset all views.
-        </p>
-        <div id="srb-dense-viewer-grid" class="dataset-viewer-grid srb-dense-viewer-grid"></div>
-        <div id="srb-dense-viewer-model-buttons" class="buttons is-centered dataset-viewer-model-buttons srb-dense-viewer-model-buttons"></div>
-        <div id="srb-dense-viewer-method-selector" class="dataset-viewer-method-selector srb-dense-viewer-method-selector"></div>
-      </div>
-    </div>
-    <!--/ Reconstruction on the Surface Reconstruction Benchmark. -->
-
-    <!-- Reconstruction on the Stanford 3D Scanning Repository. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Reconstruction on the Stanford 3D Scanning Repository</h2>
-        <p>Meshes are extracted at a voxel resolution of <strong>1024³</strong> (to ease visualization, we display meshes decimated by a factor of ten, with negligible loss of geometric detail). See paper for details.</p>
-        <p class="has-text-centered dataset-viewer-description" style="margin-top: 15px;">
-          Drag to rotate, right-drag to translate, scroll to zoom, and press <strong>R</strong> to reset all views.
-        </p>
-        <div id="stanford-viewer-grid" class="dataset-viewer-grid stanford-viewer-grid"></div>
-        <div id="stanford-viewer-model-buttons" class="buttons is-centered dataset-viewer-model-buttons stanford-viewer-model-buttons"></div>
-        <div id="stanford-viewer-method-selector" class="dataset-viewer-method-selector stanford-viewer-method-selector"></div>
-
-      </div>
-    </div>
-    <!--/ Reconstruction on the Stanford 3D Scanning Repository. -->
-
-    <!-- Reconstruction on ScanNet. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Reconstruction on ScanNet</h2>
-        <p>Meshes are extracted at a voxel resolution of <strong>512³</strong> (to ease visualization, we display meshes decimated by a factor of ten, with negligible loss of geometric detail). See paper for details.</p>
-        <p class="has-text-centered dataset-viewer-description" style="margin-top: 15px;">
-          Drag to rotate, right-drag to translate, scroll to zoom, and press <strong>R</strong> to reset all views.
-        </p>
-        <div id="scannet-viewer-grid" class="dataset-viewer-grid scannet-viewer-grid"></div>
-        <div id="scannet-viewer-model-buttons" class="buttons is-centered dataset-viewer-model-buttons scannet-viewer-model-buttons"></div>
-        <div id="scannet-viewer-method-selector" class="dataset-viewer-method-selector scannet-viewer-method-selector"></div>
-
-      </div>
-    </div>
-    <!--/ Reconstruction on ScanNet. -->
-  </div>
-</section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{weiherer2026vksr,
-  author    = {Weiherer, Maximilian and Umah, Chukwudi Williams and Egger, Bernhard},
-  title     = {VKSR: Scalable Kernel Surface Reconstruction Using Vecchia's Approximation},
-  booktitle = {ECCV},
-  year      = {2026},
-}</code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="#">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="#" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p class="has-text-centered">
-            This website template has been borrowed from <a href="https://keunhong.com">Keunhong Park</a>'s <a href="https://nerfies.github.io">Nerfies</a> website. 
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-</body>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img style="display:block;margin:0 auto" width="150" src="images/ms_splatting.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Multi-Spectral Gaussian Splatting with Neural Color Representation [<a href="https://meyerls.github.io/ms_splatting/">project page</a>] [<a href="https://arxiv.org/abs/2506.03407">paper</a>] [<a href="https://github.com/j-gruen/MS-Splatting">code</a>]
+								</strong>
+								<br>
+								<a href="https://meyerls.github.io">Lukas Meyer</a>,
+								<a href="https://j-gruen.github.io">Josef Grün</a>,
+								Maximilian Weiherer,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>,
+								Marc Stamminger,
+								<a href="https://lfranke.github.io">Linus Franke</a>
+								<br>
+								<em>Eurographics (Computer Graphics Forum)</em>, 2026
+								<p>We propose MS-Splatting, an extension of 3DGS to multi-spectral inputs that uses a novel neural color representation instead of simple per-band spherical harmonics. </p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/towards_ms_splatting.gif">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Towards Integrating Multi-Spectral Imaging with Gaussian Splatting [<a href="https://meyerls.github.io/towards_multi_spec_splat/">project page</a>] [<a href="https://arxiv.org/abs/2509.00989">paper</a>] [<a href="https://github.com/j-gruen/MS-Splatting">code</a>]
+								</strong>
+								<br>
+								<a href="https://meyerls.github.io">Lukas Meyer*</a>,
+								<a href="https://j-gruen.github.io">Josef Grün*</a>,
+								Maximilian Weiherer,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>,
+								Marc Stamminger,
+								<a href="https://lfranke.github.io">Linus Franke</a>
+								<br>
+								<em>Vision, Modeling, and Visualization (VMV)</em>, 2025
+								<p>We present a systematic and comprehensive evaluation of how to integrate multi-spectral imagery (red, green, red-edge, and near-infrared) into the 3D Gaussian Splatting framework.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/irbsm.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									iRBSM: A Deep Implicit 3D Breast Shape Model [<a href="https://rbsm.re-mic.de/implicit/">project page</a>] [<a href="https://arxiv.org/abs/2412.13244">paper</a>] [<a href="https://github.com/mweiherer/irbsm">code</a>]
+								</strong>
+								<br>
+								Maximilian Weiherer,
+								Antonia von Riedheim,
+								<a href="https://www.linkedin.com/in/vanessa-brebant-0a391843/">Vanessa Brebant</a>,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>,
+								<a href="https://re-mic.de/en/head/">Christoph Palm</a>
+								<br>
+								<em>German Conference on Medical Image Computing (BVM)</em>, 2025
+								<p>We introduce the first deep implicit 3D breast shape model. </p>
+							</td>
+						</tr>
+						<tr bgcolor="#ffffd0">
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img style="display:block;margin:0 auto" width="120" src="images/matern.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Matérn Kernels for Tunable Implicit Surface Reconstruction [<a href="https://arxiv.org/abs/2409.15466">paper</a>] [<a href="https://github.com/mweiherer/matern-surface-reconstruction">code</a>]
+								</strong>
+								<br>
+								Maximilian Weiherer,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>
+								<br>
+								<em>International Conference on Learning Representations (ICLR)</em>, 2025
+								<p>We use and theoretically analyze the family of Matérn kernels for tunable implicit surface reconstruction, demonstrating that they outperform recently employed arc-cosine kernels.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img style="display:block;margin:0 auto" width="120" src="images/thermal_nerf.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Exploring Multi-modal Neural Scene Representations With Applications on Thermal Imaging [<a href="https://mert-o.github.io/ThermalNeRF/">project page</a>] [<a href="https://arxiv.org/abs/2403.11865">paper</a>] [<a href="https://github.com/mert-o/thermalnerfs">code</a>]
+								</strong>
+								<br>
+								<a href="https://github.com/mert-o/">Mert Özer*</a>,
+								Maximilian Weiherer*,
+								<a href="https://www.linkedin.com/in/martin-hundhausen-0bb4a214a/">Martin Hundhausen</a>,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>
+								<br>
+								<em>European Conference on Computer Vision Workshops (ECCVW)</em>, 2024
+								<p>We systematically compare and analyze four different strategies of how to incorporate multi-modality into neural scene representations, focusing on thermal imaging. </p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/ssm_intersections.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Approximating Intersections and Differences Between Linear Statistical Shape Models Using Markov Chain Monte Carlo [<a href="https://arxiv.org/abs/2211.16314">paper</a>]
+								</strong>
+								<br>
+								Maximilian Weiherer,
+								<a href="https://www.linkedin.com/in/finn-klein-bba723202/">Finn Klein</a>,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>
+								<br>
+								<em>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2024
+								<p>We introduce a new method to compare SSMs by computing approximate intersections and set-theoretic differences between the allowable shape domains spanned by the models.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle;text-align:center">
+								<img style="display:block;margin:0 auto" width="120" src="images/rbsm.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Learning the shape of female breasts: an open-access 3D statistical shape model of the female breast built from 110 breast scans [<a href="https://rbsm.re-mic.de/explicit/">project page</a>] [<a href="https://arxiv.org/abs/2107.13463">paper</a>]
+								</strong>
+								<br>
+								Maximilian Weiherer,
+								<a href="https://www.linkedin.com/in/andreas-eigenberger-090318142/">Andreas Eigenberger</a>,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>,
+								<a href="https://www.linkedin.com/in/vanessa-brebant-0a391843/">Vanessa Brebant</a>,
+								<a href="http://lukasprantl.de/">Lukas Prantl</a>,
+								<a href="https://re-mic.de/en/head/">Christoph Palm</a>
+								<br>
+								<em>The Visual Computer (Vis. Comput.)</em>, 2023
+								<p>We present the first publicly available 3D statistical shape model of the female breast.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/haptivist_2.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Optically tracked and 3D printed haptic phantom hand for surgical training system [<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7063285/pdf/qims-10-02-340.pdf">paper</a>]
+								</strong>
+								<br>
+								<a href="https://www.linkedin.com/in/johannes-maier/">Johannes Maier</a>,
+								Maximilian Weiherer,
+								<a href="https://www.researchgate.net/profile/Michaela-Huber-4">Michaela Huber</a>,
+								<a href="https://re-mic.de/en/head/">Christoph Palm</a>
+								<br>
+								<em>Quantitative Imaging in Medicine and Surgery (QIMS)</em>, 2020
+								<p>Improved previously developed metamaterials to imitate human soft tissue and presented an optically tracked 3D printed phantom of the whole hand.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/shading.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Retrospective Color Shading Correction for Endoscopic Images [<a href="https://link.springer.com/content/pdf/10.1007%2F978-3-658-29267-6_3.pdf">paper</a>]
+								</strong>
+								<br>
+								Maximilian Weiherer,
+								Martin Zorn,
+								<a href="https://www.linkedin.com/in/thomas-wittenberg-1779952/">Thomas Wittenberg</a>,
+								<a href="https://re-mic.de/en/head/">Christoph Palm</a>
+								<br>
+								<em>Bildverarbeitung für die Medizin (BVM)</em>, 2020
+								<p>Extending the retrospective shading correction method based on signal envelope estimation to color images using principal color components.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/haptivist_1.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Imitating human soft tissue on basis of a dual-material 3D print using a support-filled metamaterial to provide bimanual haptic for a hand surgery training system [<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6351818/pdf/qims-09-01-30.pdf">paper</a>]
+								<br>
+								</strong>
+								<a href="https://www.linkedin.com/in/johannes-maier/">Johannes Maier</a>,
+								Maximilian Weiherer,
+								<a href="https://www.researchgate.net/profile/Michaela-Huber-4">Michaela Huber</a>,
+								<a href="https://re-mic.de/en/head/">Christoph Palm</a>
+								<br>
+								<em>Quantitative Imaging in Medicine and Surgery (QIMS)</em>, 2019
+								<p>We propose new 3D-printable support-filled metamaterials to imitate human soft tissue.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/dop.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									Stitching Pathological Tissue Images using DOP Feature Tracking [<a href="https://link.springer.com/content/pdf/10.1007/978-3-662-56537-7_84.pdf">paper</a>]
+								</strong>
+								<br>
+								<a href="https://www.linkedin.com/in/matthias-bergler-906aa2152/">Matthias Bergler</a>,
+								Maximilian Weiherer,
+								<a href="https://www.researchgate.net/profile/Tobias-Bergen">Tobias Bergen</a>,
+								<a href="https://www.linkedin.com/in/malte-avenhaus-2024b4143/">Malte Avenhaus</a>,
+								<a href="https://www.researchgate.net/profile/David-Rauber">David Rauber</a>,
+								<a href="https://www.linkedin.com/in/thomas-wittenberg-1779952/">Thomas Wittenberg</a>,
+								<a href="https://www.linkedin.com/in/christian-m%C3%BCnzenmayer-b903a888/">Christian Münzenmayer</a>,
+								<a href="https://www.researchgate.net/profile/Michaela-Benz">Michaela Benz</a>
+								<br>
+								<em>Bildverarbeitung für die Medizin (BVM)</em>, 2018
+								<p>Using the difference of two elliptical paraboloids as approximation of the Laplacian of Gaussian, we enable real-time image stitching of microscopic images.</p>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+					<tbody>
+						<tr>
+							<td style="padding:20px;width:100%;vertical-align:middle">
+								<heading>Not-So-Serious Research</heading>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+					<tbody>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/sigbovik_zero2hero.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									From Zero to Hero: Convincing with Extremely Complicated Math [<a href="https://arxiv.org/abs/2304.00399">paper</a>] [<a href="https://github.com/mweiherer/zero2hero">code</a>]
+								</strong>
+								<br>
+								Maximilian Weiherer,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>
+								<br>
+								<em>Special Interest Group on Harry Quechua Bovik (SIGBOVIK)</em>, 2023
+								<p>We present zero2hero, an innovative system that automatically extracts embarrassingly simple equations from a given Latex document and makes them look extremely complex.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:20px;width:25%;vertical-align:middle">
+								<img width="160" src="images/sigbovik_erlkoenig.png">
+							</td>
+							<td style="padding:20px;width:75%;vertical-align:middle">
+								<strong>
+									A Free Computer Vision Lesson for Car Manufacturers or It is Time to Retire the Erlkönig [<a href="sigbovik_erlkoenig.pdf">paper</a>]
+								</strong>
+								<br>
+								Maximilian Weiherer,
+								<a href="https://eggerbernhard.ch/">Bernhard Egger</a>
+								<br>
+								<em>Special Interest Group on Harry Quechua Bovik (SIGBOVIK)</em>, 2022
+								<p>We blame car manufacturers by showing that camouflaged cars (a.k.a. Erlkönige) can be better 3D reconstructed than their uncovered counterparts (without disturbing patterns).</p>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+					<tbody>
+						<tr>
+							<td style="padding:20px;width:100%;vertical-align:middle">
+								This template was once created by <a href="https://jonbarron.info/">Jon Barron</a> and can now be stolen from <a href="https://github.com/jonbarron/website">here</a>.
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+	</body>
 </html>
