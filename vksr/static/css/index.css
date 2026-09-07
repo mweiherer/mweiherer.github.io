@@ -1,0 +1,478 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+.dataset-viewer-description {
+  margin-top: -0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.dataset-viewer-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.dataset-viewer-card {
+  flex: 0 0 240px;
+  position: relative;
+  border: 1px solid #d7dce2;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f9fbff 0%, #f3f6fa 100%);
+  box-shadow: 0 6px 18px rgba(15, 26, 43, 0.08);
+  overflow: hidden;
+}
+
+.dataset-viewer-canvas {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.dataset-viewer-canvas canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.dataset-viewer-status {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(2.25rem + 10px);
+  text-align: center;
+  font-size: 0.85rem;
+  color: #44536a;
+  pointer-events: none;
+}
+
+.dataset-viewer-caption {
+  margin: 0;
+  padding: 0.7rem 0.75rem 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  color: #2f3a4b;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dataset-viewer-caption-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28rem;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.dataset-viewer-model-buttons {
+  margin-top: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dataset-viewer-model-button {
+  min-width: 110px;
+  font-weight: 600;
+}
+
+.dataset-viewer-model-button.has-point-label {
+  position: relative;
+  overflow: visible;
+}
+
+.dataset-viewer-model-button.has-point-label::after {
+  content: attr(data-point-label);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  padding: 0.28rem 0.48rem;
+  border-radius: 6px;
+  background: #2f3a4b;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.dataset-viewer-model-button.has-point-label::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 3px);
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #2f3a4b;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.dataset-viewer-model-button.has-point-label:hover::after,
+.dataset-viewer-model-button.has-point-label:hover::before,
+.dataset-viewer-model-button.has-point-label:focus-visible::after,
+.dataset-viewer-model-button.has-point-label:focus-visible::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dataset-viewer-method-selector {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.dataset-viewer-method-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+  font-size: 0.92rem;
+  color: #2f3a4b;
+}
+
+.dataset-viewer-method-option input {
+  accent-color: #3273dc;
+}
+
+.dataset-viewer-method-option.is-disabled {
+  opacity: 0.5;
+}
+
+.shapenet-viewer-tab-panels {
+  margin-top: 0.5rem;
+}
+
+.image-compare {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.15);
+  line-height: 0;
+}
+
+.image-compare-base,
+.image-compare-top {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-compare-overlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.image-compare-overlay .image-compare-top {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-compare-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.image-compare-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  background: rgba(47, 58, 75, 0.85);
+  transform: translate(-50%, -50%);
+}
+
+.image-compare-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.image-compare-badge {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  padding: 0.42rem 0.58rem;
+  border-radius: 9px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+  background: rgba(25, 33, 46, 0.86);
+  backdrop-filter: blur(2px);
+}
+
+.image-compare-badge-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.36rem;
+  white-space: nowrap;
+}
+
+.image-compare-badge-title {
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.image-compare-badge-separator {
+  opacity: 0.75;
+  font-weight: 700;
+}
+
+.image-compare-badge-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  line-height: 1.1;
+  opacity: 0.96;
+}
+
+.image-compare-badge-meta .icon {
+  width: 1em;
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-compare-slider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+}
+
+.image-compare-controls {
+  margin: 0.3rem auto 1.2rem;
+  max-width: 920px;
+  text-align: center;
+}
+
+.image-compare-baseline-selector {
+  margin-top: 0;
+  overflow-x: visible;
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .image-compare {
+    border-radius: 10px;
+  }
+
+  .image-compare-divider::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .image-compare-badge {
+    font-size: 0.7rem;
+    padding: 0.33rem 0.45rem;
+  }
+
+  .image-compare-badge-title {
+    font-size: 0.78rem;
+  }
+
+}
