@@ -1,0 +1,5 @@
+anchor: 350.70
+daratech: 303.11
+dc: 354.45
+gargoyle: 395.17
+lord_quas: 302.06

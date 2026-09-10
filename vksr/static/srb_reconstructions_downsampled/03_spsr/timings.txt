@@ -1,0 +1,5 @@
+anchor: 2.67
+daratech: 1.54
+dc: 2.08
+gargoyle: 2.52
+lord_quas: 1.38
