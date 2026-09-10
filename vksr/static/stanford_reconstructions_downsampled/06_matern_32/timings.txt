@@ -1,0 +1,6 @@
+Armadillo: 5752.93
+dragon_vrip: 2970.70
+happy_vrip: 1536.24
+lucy: 2599.70
+xyzrgb_dragon: 3004.95
+xyzrgb_statuette: 3207.52
